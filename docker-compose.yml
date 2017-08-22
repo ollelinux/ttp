@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:9.4
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - .env
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - ./dockerfiles/pgdata:/var/lib/postgresql/data/pgdata
+      - ./scripts:/docker-entrypoint-initdb.d
+
+  django:
+    image: 'django'
+    build: .
+    env_file:
+    - .env
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - '127.0.0.1:8002:8000'
+    depends_on:
+      - db
+    links:
+      - db

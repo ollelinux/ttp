@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Task: Python (20170411)</title>
+</head>
+<body>
+
+<pre>
+
+    Test Task
+    PYTHON
+
+    # PROBLEM STATEMENT
+
+    “Marryat Hotels” needs a Property Management System to operate their hotel
+    business. Your task is to define and implement a backend REST API using the
+    Python programming language. The API should provide functionality to do
+    following:
+
+    1. CRUD Reservations
+    2. Search Reservations by date range (e.g. get reservations from 15 to 19 July
+       2017)
+
+    Reservation is a first-class citizen of the system. Reservation entity
+    contains: first & last name of the guest, room number, start date and end date of
+    the stay.
+
+
+    # IMPLEMENTATION DETAILS
+
+    Please follow these rules for your solution:
+
+    1. Use Python as a programming language.
+    2. Distribute application as a docker image via hub.docker.com
+    3. Share the code via github.com
+
+    You’re also encouraged to use any third-party libraries and frameworks, which may
+    simplify you work.
+
+    When posting the code to Github, keep in mind we prefer some commits history in
+    the repo vs single commit. Tests are welcome and encouraged.
+
+    Good luck!
+    ♡ KEYPR Kyiv Dev
+</pre>
+    <blockquote>
+    <h3>Check links</h3>
+    {% with url_name='api/reservations/' %}
+    {# http://127.0.0.1:8000/api/reservations/ #}
+    GET list: <a href="{{url_name}}" title="{{url_name}}" >{{url_name}}</a>
+    {% endwith %}
+    </blockquote>
+    <p></p>
+</body>
+</html>
