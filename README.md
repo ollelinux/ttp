@@ -1,2 +1,2 @@
 # ttp
-Simple test project
+Simple test project with docker settings
